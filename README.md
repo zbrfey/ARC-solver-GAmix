@@ -110,9 +110,8 @@ The system uses a variety of primitive operations, including but not limited to:
 1.  **Ensure Data:** Place your ARC task JSON files in one of the directories mentioned above (e.g., `data/training/`).
 2.  **Run Script:** Execute the Python script from your terminal:
     ```bash
-    python your_script_name.py
+    python arcsolver.py
     ```
-    (Replace `your_script_name.py` with the actual name of the file, e.g., `input_file_0.py`).
 
 3.  **Configuration:**
     The main execution logic is within the `if __name__ == "__main__":` block. Key GP parameters can be adjusted directly in the `search_parameters` dictionary in this block:
