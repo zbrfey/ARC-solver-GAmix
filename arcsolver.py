@@ -1680,23 +1680,23 @@ if __name__ == "__main__":
     search_parameters = {
         "population_size": 200,      # Reduced for speed: 50-200 is typical
         "max_generations": 100,       # Reduced for speed: 50-200 is typical
-        "elite_percentage": 0.13,   
+        "elite_percentage": 0.10,   
         "tournament_size": 3,       
-        "arg_mutation_prob": 0.70,  
-        "add_op_prob": 0.42,        # Higher chance to add ops, good for small programs
-        "remove_op_prob": 0.20,     
+        "arg_mutation_prob": 0.15,  
+        "add_op_prob": 0.15,        # Higher chance to add ops, good for small programs
+        "remove_op_prob": 0.15,     
         "change_op_prob": 0.20,     
         "swap_op_prob": 0.15,       
-        "stagnation_boost_factor_mutate": 13.75, 
-        "cataclysm_stagnation_threshold": 0.4, 
-        "cataclysm_prob": 0.70                 
+        "stagnation_boost_factor_mutate": 0.75, 
+        "cataclysm_stagnation_threshold": 0.5, 
+        "cataclysm_prob": 0.20                 
     }
     
     # Run on all tasks found (or dummy tasks if created)
     # Set task_limit to a small number (e.g., 3 or len(task_files)) for quick testing.
     run_multiple_tasks(
         search_config=search_parameters,
-        task_limit=20 # Process all found tasks, or set to e.g. 3 for quicker test
+        task_limit=len(task_files) # Process all found tasks, or set to e.g. 3 for quicker test
     )
     
     # Example for testing a single specific task if needed:
